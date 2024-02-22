@@ -44,25 +44,12 @@ btn.addEventListener("click",function(e){
   document.getElementById("total-price").innerText=totalPrice;
   document.getElementById("card-count").innerText = count;
 
+ 
+
  // document.getElementById('addBtn').style.backgroundColor='#1DD100';
 });
 }
 
-const less = document.getElementById("couponCode").innerText;
-document.getElementById(couponcode).addEventListener('click',function(){
-  if(less=="NEW15")
-  {
-    document.grandtotal=grandtotal + 0.15;
-  }
-  else if(less=="Couple 20")
-  {
-    document.grandtotal=grandtotal*0.20;
-  }
-  else
-  {
-    document.grandtotal=grandtotal;
-  }
-})
 
 //----------------------color change--------------------
 function ColorChange(){
@@ -89,7 +76,41 @@ function COLOR(){
               }          
 const All=document.getElementById("btn").innerText;
 console.log(All); 
-
-  
-  
+//---------------faild to work-------------------
+/*
+const convertedGrandTotal = parseInt(grandtotal);
+const coupon= document.getElementById('inputId').innerText;
+document.getElementById('buttonId').addEventListener('click',function(){
+  if(coupon=='NEW 15' )
+  {
+    convertedGrandTotal = convertedGrandTotal*0.15;
+  }
+  else if(coupon=="Couple 20")
+  {
+    
+    convertedGrandTotal = convertedGrandTotal*0.20;
+  }
+  else
+  {
+    convertedGrandTotal=convertedGrandTotal;
+  }
+});
+*/
+ const InputValue = document.getElementById("InputId").innerText;
+ function grandTotalCost(InputValue){
+  const totalCost = document.getElementById("total-price").innerText;
+  const convertTotalCost = parseInt(totalCost);
+  if(InputValue =='NEW 15')
+  {
+    setInnerText("grandTotal",convertTotalCost-(convertTotalCost*0.15));
+  }
+  else if(InputValue =='COUPLE 20')
+  {
+    setInnerText("grandTotal",convertTotalCost - (convertTotalCost*0.20));
+  }
+  else
+  {
+    setInnerText("grandTotal",convertTotalCost - (convertTotalCost*0.20));
+  }
+ }
       
