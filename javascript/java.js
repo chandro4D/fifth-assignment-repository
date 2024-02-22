@@ -10,6 +10,7 @@ document.getElementById('btn').style.backgroundColor='#1DD100';
 //--------------seat reduce-------------------
 const allBtn=document.getElementsByClassName("add-btn");
 let totalPrice =0;
+let Seat=0;
 let count =32;
 let grandtotal=0;
 
@@ -18,6 +19,7 @@ btn.addEventListener("click",function(e){
   count=count-1;
   totalPrice=totalPrice+550;
   grandtotal=grandtotal+550;
+  Seat=Seat + 1;
   
 
   const firstName = e.target.innerText ;
@@ -37,11 +39,10 @@ btn.addEventListener("click",function(e){
   ul.appendChild(li2);
   ul.appendChild(li3);
   shiftA.appendChild(ul);
-
+  document.getElementById("seat").innerText=Seat;
   document.getElementById("grandTotal").innerText=grandtotal;
   document.getElementById("total-price").innerText=totalPrice;
   document.getElementById("card-count").innerText = count;
-
 
  // document.getElementById('addBtn').style.backgroundColor='#1DD100';
 });
