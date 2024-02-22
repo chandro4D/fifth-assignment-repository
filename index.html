@@ -45,7 +45,7 @@
                   <div class="max-w-md">
                     <h1 class="font-raleway mb-5 text-5xl font-bold "> <span class="text-[#FFFFFF]">End-to-End Travel with</span> <br><span class="text-[#1DD100]">SHAKHOR PARIBAHAN</span> </h1>
                     <p class="mb-5 text-[#FFFFFF]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                    <button  id="toggleButton" class="btn btn-primary bg-[#1DD100] text-[#030712]">Buy Tickets</button>
+                    <a href="#allSection"><button id="showAll" class="btn btn-primary bg-[#1DD100] text-[#030712]">Buy Tickets</button></a>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@
             </div>
             
         </section>
-        <section id="hiddenSection">
+        <section>
             <div class="text-center w-[1200] h-[220] m-40">
                 <h2 class="text-4xl font-bold text-[#030712]">
                     SHAKHOR PARIBAHAN
@@ -107,20 +107,20 @@
                 </p>
             </div>
 
-            <div class="flex justify-between w-[1170] h-[418] items-center">
+            <div id="allSection" class="flex justify-between w-[1170] h-[418] items-center">
                 <div>
                     <div class="flex w-[808px] h-[72px] justify-between ml-52 mb-10">
                         <div>
                             <img src="images/bus-logo.png" alt="">
                         </div>
                         <div>
-                            <h3 class="text-3xl font-bold text-[#030712]">Greenline Paribahan</h3>
+                            <h3 class="text-3xl font-bold text-[#030712]">SHAKHOR PARIBAHAN</h3>
                             <h2 class="text-lg font-normal text-[#03071299]">Coach-009-WEB ! AC_Business</h2>
                         </div>
                         <div>
                             <img src="images/seat-green.png" alt="">
                             <h2 class="text-lg font-medium text-[#1DD100]">
-                                <span id="card-count">16</span> <span>Seats left</span>
+                                <span id="card-count">32</span> <span>Seats left</span>
                             </h2>
                         </div>
     
@@ -162,45 +162,71 @@
             </div>
         
             <div class="w-[1170] h-[1056] flex justify-between mt-20 mb-40 ml-36 mr-36">
-                <div class="flex justify-around w-[500] h-[400] p-20 ml-4 bg-slate-500 rounded-3xl">
+                <div class="flex justify-around w-[500] h-[370] p-20 ml-4 mr-8 bg-slate-500 rounded-3xl">
                     <div>
                         <div>
                             <img src="images/seat-gray.png">
                             <h1>Available</h1>
                             <br>
-                            <div class=" rounded-2xl ml-[304px] w-[100px] h-[50px] text-center bg-[#F7F8F8] p-3">
+                            <div class=" rounded-2xl ml-[340px] w-[100px] h-[50px] text-center bg-[#F7F8F8] p-3">
                                 <button class="">DRIVER</button>
                             </div>
                             <br>
+                            <br>
                             <div class="flex ml-10 justify-between">
-                                <div class="text-center p-2 bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">
-                                    <button   class="add-btn">A1</button>
-                                </div>
-                                
-                                <button id="addBtn"  class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-14 rounded-xl">A2</button>
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">A3</button>
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">A4</button>
+                                <button id="btn" onclick="colorChange()" class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">A1</button>
+                                <button id="addBtn" onclick="ColorChange()"  class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-24  rounded-xl">A2</button>
+                                <button id="change" onclick="change()"  class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">A3</button>
+                                <button id="Change" onclick="Change()" class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">A4</button>
                             </div>
                             <br>
                             <div class="flex ml-10 justify-around">
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">B1</button>
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-14 rounded-xl">B2</button>
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">B3</button>
-                                <button   class="add-btn bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">B4</button>
+                                <button id="color" onclick="color()"  class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">B1</button>
+                                <button id="Color" onclick="Color()"  class="text-white add-btn bg-slate-400 w-[70px] h-[40px]   mr-24  rounded-xl">B2</button>
+                                <button id="COlor" onclick="COlor()" class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">B3</button>
+                                <button id="COLOR" onclick="COLOR()" class="text-white add-btn bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">B4</button>
                             </div>
                             <br>
                             <div class="flex ml-10 justify-around">
-                                <button  class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">C1</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-14 rounded-xl">C2</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">C3</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">C4</button>
+                                <button  class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">C1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-24  rounded-xl">C2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">C3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">C4</button>
                             </div>
                             <br>
                             <div class="flex ml-10 justify-around">
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">D1</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-14 rounded-xl">D2</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">D3</button>
-                                <button class="bg-[#F7F8F8] w-[70px] h-[40px] mr-4 rounded-xl">D4</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">D1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-24  rounded-xl">D2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">D3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">D4</button>
+                            </div>
+                            <br>
+                            <div class="flex ml-10 justify-around">
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">E1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px]  mr-24  rounded-xl">E2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">E3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">E4</button>
+                            </div>
+                            <br>
+                            <div class="flex ml-10 justify-around">
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">F1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px]    mr-24 rounded-xl">F2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">F3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">F4</button>
+                            </div>
+                            <br>
+                            <div class="flex ml-10 justify-around">
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">G1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px]   mr-24  rounded-xl">G2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">G3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">G4</button>
+                            </div>
+                            <br>
+                            <div class="flex ml-10 justify-around">
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">H1</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px]  mr-24 rounded-xl">H2</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">H3</button>
+                                <button class="text-white bg-slate-400 w-[70px] h-[40px] mr-4 rounded-xl">H4</button>
                             </div>
                         </div>
                     </div>
@@ -209,7 +235,7 @@
                         <h1>Selected</h1>
                     </div>
                 </div>
-                <div class="w-[500px] h-[550px] bg-gray-600 px-10 py-10 items-center rounded-3xl">
+                <div class="w-[500px] h-[795px] bg-gray-600 px-10 py-10 ml-7 items-center rounded-3xl">
                     <div class="flex  justify-around">
                         <div>
                             <h1>Seat</h1>
@@ -221,9 +247,10 @@
                             <h2>Price</h2>
                         </div>
                     </div>
-                    <div class="flex justify-around">
+                    <br>
+                    <div class="flex justify-around ">
                         <div>
-                            <h3>C2</h3>
+                            <h3>A1</h3>
                         </div>
                         <div>
                             <h2>Economoy</h2>
@@ -232,9 +259,34 @@
                             <h2>550</h2>
                         </div>
                     </div>
+                    <br>
                     <div class="flex justify-around">
                         <div>
-                            <h3>C3</h3>
+                            <h3>B1</h3>
+                        </div>
+                        <div>
+                            <h2>Economoy</h2>
+                        </div>
+                        <div>
+                            <h2>550</h2>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="flex justify-around">
+                        <div>
+                            <h3>C1</h3>
+                        </div>
+                        <div>
+                            <h2>Economoy</h2>
+                        </div>
+                        <div>
+                            <h2>550</h2>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="flex justify-around">
+                        <div>
+                            <h3>D1</h3>
                         </div>
                         <div>
                             <h2>Economoy</h2>
