@@ -1,3 +1,5 @@
+//class="bg-[#1DD100] rounded-2xl w-full h-10 text-white"
+
 function setInnerText(id,value){
   document.getElementById(id).innerText =value;
 }
@@ -7,10 +9,15 @@ document.getElementById('btn').style.backgroundColor='#1DD100';
 }
 //--------------seat reduce-------------------
 const allBtn=document.getElementsByClassName("add-btn");
+let totalPrice =0;
 let count =32;
+let grandtotal=0;
+
 for(const btn of allBtn){
 btn.addEventListener("click",function(e){
   count=count-1;
+  totalPrice=totalPrice+550;
+  grandtotal=grandtotal+550;
   
 
   const firstName = e.target.innerText ;
@@ -31,13 +38,31 @@ btn.addEventListener("click",function(e){
   ul.appendChild(li3);
   shiftA.appendChild(ul);
 
-
-
+  document.getElementById("grandTotal").innerText=grandtotal;
+  document.getElementById("total-price").innerText=totalPrice;
   document.getElementById("card-count").innerText = count;
-  
+
+
  // document.getElementById('addBtn').style.backgroundColor='#1DD100';
 });
 }
+
+const less = document.getElementById("couponCode").innerText;
+document.getElementById(couponcode).addEventListener('click',function(){
+  if(less=="NEW15")
+  {
+    document.grandtotal=grandtotal + 0.15;
+  }
+  else if(less=="Couple 20")
+  {
+    document.grandtotal=grandtotal*0.20;
+  }
+  else
+  {
+    document.grandtotal=grandtotal;
+  }
+})
+
 //----------------------color change--------------------
 function ColorChange(){
   document.getElementById('addBtn').style.backgroundColor='#1DD100';
@@ -62,6 +87,8 @@ function COLOR(){
               document.getElementById('COLOR').style.backgroundColor='#1DD100';
               }          
 const All=document.getElementById("btn").innerText;
-console.log(All);   
+console.log(All); 
+
+  
   
       
